@@ -1,0 +1,45 @@
+<html>
+<head>
+<script>
+// a = 'a b c d e f g h';
+// a.split(' ').map((i, index) => {
+//    document.write('<h3 class="title">' + index + ' - ' + i.toUpperCase() + '</h3>');
+//    });
+size = 16;
+
+function changeValue(a) {
+	let elem = document.getElementById('samal');
+	if (a > 0)
+    	size += 5;
+    else if (a == 0)
+    	size = 16;
+	else
+    	size -= 5;
+    elem.style.fontSize = size + 'px';
+}
+</script>
+<style>
+.title {
+	border: 1px solid gray;
+    border-radius: 10px;
+	padding: 10px;
+    margin-top: 20px;
+	text-align: center;
+    font-size: 16px;
+    color: darkred;
+    font-style: Arial;
+}
+.title:hover {
+	cursor: pointer;
+    background-color: #1976d2;
+    color: white;
+}
+</style>
+</head>
+<body>
+    <button onClick="changeValue(1)">Increase</button>
+    <button onClick="changeValue(-1)">Decrease</button>
+    <button onClick="changeValue(0)">Reset</button>
+    <div id="samal" class="title">Hello</div>
+</body>
+</html>
